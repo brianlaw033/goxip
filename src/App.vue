@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <NavBar />
     <router-view/>
   </div>
 </template>
@@ -15,6 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 12px;
 }
 
 #nav {
@@ -30,3 +28,15 @@
   }
 }
 </style>
+
+<script>
+// @ is an alias to /src
+import NavBar from '@/components/NavBar.vue';
+
+export default {
+  name: 'home',
+  components: {
+    NavBar,
+  },
+};
+</script>
